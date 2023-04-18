@@ -1,0 +1,49 @@
+body{
+    background-color: rgb(237, 168, 125);
+}
+
+
+.color li {
+    display: flex;
+    flex-direction: column;
+    border: 10px solid wheat;
+    margin-top: 10px;
+    padding: 20px 25rem;
+    font-size: 20px;
+    background-color: rgb(237, 168, 125);
+}
+
+.pref{
+    background-color: rgb(226, 155, 111);
+    padding: 6rem;
+    margin-top: -5rem;
+    margin-right: -5px;
+    padding-bottom: 50%;
+}
+
+.align{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+/* adding themes & list bgcolors */
+
+/* dropdown menu */
+.dropdown option{
+    border: 1px solid;
+}
+
+.dropdown option:hover{
+    background: pink;
+}
+
+/* styling list-styles */
+
+.list-styles option{
+    border: 1px solid;
+}
+
+.list-styles option:hover{
+    background: pink;
+}

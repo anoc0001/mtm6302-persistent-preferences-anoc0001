@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>persistent-preferences</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="align">
+        <div class="color">
+            <h1>persistent-preferences</h1>
+            <button onclick="generateList()">Generate list</button>
+            <div class="listBlock"></div>
+        </div>
+
+        <script>
+            let listItems = ["Red", "Blue", "Green", "Orange", "Pink", "Purple"];
+
+            let listBlock = document.querySelector(".listBlock");
+
+            function generateList() {
+                let unorderList = document.createElement("ul");
+
+                listItems.forEach(item => {
+                    let list = document.createElement("li");
+                    list.innerHTML = item;
+                    unorderList.append(list);
+                })
+
+                listBlock.appendChild(unorderList);
+
+                localStorage.setItem('listItems', 'listBlock');
+
+                localStorage.getItem('listBlock')
+                localStorage.getItem('listItems')
+            }
+
+
+        </script>
+
+        <div class="pref">
+            <h2>Preferences</h2>
+            <p>Themes:</p>
+            <optgroup class="dropdown">
+                <option value="hot" id="hot">salmon</option>
+
+                <option value="Blue" id="blue">nude</option>
+
+                <option value="Pink" id="pink">Pink</option>
+            </optgroup>
+
+            <p>List styles:</p>
+            <optgroup class="list-styles">
+                <option value="white" id="white">white</option>
+                <option value="grey" id="grey">grey</option>
+                <option value="funky" id="funky">funky</option>
+            </optgroup>
+
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
